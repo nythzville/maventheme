@@ -1,9 +1,6 @@
 <?php
 /*
 *	Primary Pages on Admin
-*
-*
-*
 */
 
 if ( ! class_exists( 'WP_List_Table' ) ) {

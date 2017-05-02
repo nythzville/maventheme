@@ -37,7 +37,7 @@ jQuery(function ($) {
 		    var attachment = frame.state().get('selection').first().toJSON();
 
 		    // Send the attachment URL to our custom image input field.
-		    imgContainer.append( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
+        imgContainer.append( '<img src="'+attachment.url+'" alt="" style="max-width:100%;"/>' );
 
 		    // Send the attachment id to our hidden input
 		    imgUrlInput.val( attachment.url );
@@ -76,6 +76,5 @@ jQuery(function ($) {
 	    // Delete the image id from the hidden input
 	    imgUrlInput.val( '' );
 
-  	});
-	
+  	});	
 });
