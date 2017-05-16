@@ -35,6 +35,22 @@ add_action( 'after_setup_theme', 'Maven_setup' );
 
 endif; // Maven Site setup
 
+function public_scripts(){
+
+	// bootstrap
+	wp_enqueue_script('bootstrap-min-js', get_template_directory_uri(). '/assets/js/bootstrap.min.js');
+	wp_enqueue_style('bootstrap-min-css', get_template_directory_uri(). '/assets/css/bootstrap.min.css');
+
+	// Font Awesome
+	wp_enqueue_style('font-awesome-min', get_template_directory_uri(). '/assets/css/font-awesome.min.css');
+
+	// Maven style
+	wp_enqueue_style('maven-front-css', get_template_directory_uri(). '/assets/css/style.css');
+
+}
+add_action( 'wp_enqueue_scripts', 'public_scripts' );
+
+
 function admin_scripts(){
 	wp_enqueue_style('bootstrap-min-css', get_template_directory_uri(). '/bootstrap/css/bootstrap.beautified.css');
 	wp_enqueue_script('bootstrap-min-js', get_template_directory_uri(). '/bootstrap/js/bootstrap.min.js');
@@ -62,4 +78,4 @@ require get_parent_theme_file_path( '/inc/admin-settings.php' );
 /**
  * Main menu.
  */
-require get_parent_theme_file_path( '/inc/primary-page.php' );
+// require get_parent_theme_file_path( '/inc/primary-page.php' );

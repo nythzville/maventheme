@@ -26,6 +26,7 @@ function maven_settings(){
 	<div class="wrap">
 		<h2>Maven Theme Settings</h2>
 		<div id="poststuff">
+			<div id="notice-container"></div>
 			<div id="post-body" class="metabox-holder columns-2">
 				<div id="post-body-content">
 					<div class="row">
@@ -147,11 +148,17 @@ function maven_settings(){
 											      	<form id="frm-color-settings" class="form-label-left maven-form">
 												      	<div class="form-group row">
 												      		<div class="col-md-6">
+												      			<?php
+												      			/*
+																*	Get Primary color
+																*/
+																$primary_color = get_option('primary_color');
+																?>
 												      			<label for="primary_colortheme">Primary Color</label>
 												      			<p><small>Most Dominant Color on your website.</small></p>
 												      		</div>
 												      		<div class="col-md-6">
-												      			<input type="text" class="form-control maven-colorpicker" name="primary_color" value="#999999">
+												      			<input type="text" class="form-control maven-colorpicker" name="primary_color" value="<?php echo ( $primary_color != "" )? $primary_color : ""?>">
 												      		</div>
 												      	</div>
 												      	<div class="form-group row">
@@ -161,18 +168,30 @@ function maven_settings(){
 
 												      		</div>
 												      		<div class="col-md-6">
-												      			<input type="text" class="form-control maven-colorpicker" name="maven_background_color" value="#999999">
+												      		<?php
+												      			/*
+																*	Get Primary color
+																*/
+																$maven_background_color = get_option('maven_background_color');
+																?>
+												      			<input type="text" class="form-control maven-colorpicker" name="maven_background_color" value="<?php echo ( $primary_color != "" )? $maven_background_color : ""?>">
 												      		</div>
 
 												      	</div>
 												      	<div class="form-group row">
 												      		<div class="col-md-6">
+												      		<?php
+												      			/*
+																*	Get Primary color
+																*/
+																$maven_font_color = get_option('maven_font_color');
+																?>
 												      			<label for="maven_font_color">Defualt Font Color</label>
 												      			<p><small>Anchor link colors</small></p>
 
 												      		</div>
 												      		<div class="col-md-6">
-												      			<input type="text" class="form-control maven-colorpicker" name="maven_font_color" value="#999999">
+												      			<input type="text" class="form-control maven-colorpicker" name="maven_font_color" value="<?php echo ( $maven_font_color != "" )? $maven_font_color : ""?>">
 												      		</div>
 
 												      	</div>
@@ -198,22 +217,34 @@ function maven_settings(){
 											<aside class="panel panel-default">
 
 												<div class="panel-body">
-													<form id="frm-general-settings" class="form-label-left maven-form">
+													<form id="frm-footer-settings" class="form-label-left maven-form">
 														<div class="form-group">
-														    <label for="theme-type">Footer Columns</label>
+															<?php
+												      			/*
+																*	Get Primary color
+																*/
+																$footer_column_number = get_option('footer_column_number');
+																?>
+														    <label for="footer_column_number">Footer Columns</label>
 														    <p><small>How many columns should be displayed in your footer.</small></p>
-														    <select class="form-control" id="theme-type" name="theme-type">
-														    	<option value="1">1</option>
-														    	<option value="2">2</option>
-														    	<option value="3">3</option>
-														    	<option value="4">4</option>
+														    <select class="form-control" id="footer_column_number" name="footer_column_number">
+														    	<option value="1" <?php echo ($footer_column_number == 1)? "selected": ""; ?>>1</option>
+														    	<option value="2" <?php echo ($footer_column_number == 2)? "selected": ""; ?>>2</option>
+														    	<option value="3" <?php echo ($footer_column_number == 3)? "selected": ""; ?>>3</option>
+														    	<option value="4" <?php echo ($footer_column_number == 4)? "selected": ""; ?>>4</option>
 														    </select>
 														    
 														</div>
 												      	<div class="form-group">
-														    <label for="theme-type">Copyright Content</label>
+														    <label for="footer_content">Copyright Content</label>
+														    <?php
+												      			/*
+																*	Get Primary color
+																*/
+																$footer_content = get_option('footer_content');
+																?>
 														    <p><small>Add a custom copyright text at the bottom of your site. eg:</small></p>
-														    <input type="text" name="footer_content" class="form-control">
+														    <input type="text" name="footer_content" class="form-control" value="<?php echo $footer_content;?>">
 														    
 														</div>
 														<div class="ln_solid"></div>
@@ -276,51 +307,93 @@ function maven_settings(){
 */
 function save_general_settings(){
 
-	// Saving theme Type
-	if(isset($_REQUEST['theme_type'])){
-		update_option( 'theme_type', $_REQUEST['theme_type']);
-	}
+	$nonce = $_REQUEST['security'];
 
-	// Saving Logo URL
-	if(isset($_REQUEST['logo_url'])){
-		update_option( 'logo_url', $_REQUEST['logo_url']);
-	}
-	
-	// Saving Favicon URL
-	if(isset($_REQUEST['favicon_url'])){
-		update_option( 'favicon_url', $_REQUEST['favicon_url']);
-	}
+	if ( ! wp_verify_nonce( $nonce, 'random-security-string' ) ) {
 
-	// Saving Custom CSS
-	if(isset($_REQUEST['custom_css'])){
-		update_option( 'custom_css', $_REQUEST['custom_css']);
-	}
+	     die( 'Security check' ); 
 
-	exit();
+	} else {
+
+		// Saving theme Type
+		if(isset($_REQUEST['theme_type'])){
+			update_option( 'theme_type', $_REQUEST['theme_type']);
+		}
+		// Saving Logo URL
+		if(isset($_REQUEST['logo_url'])){
+			update_option( 'logo_url', $_REQUEST['logo_url']);
+		}
+		// Saving Favicon URL
+		if(isset($_REQUEST['favicon_url'])){
+			update_option( 'favicon_url', $_REQUEST['favicon_url']);
+		}
+		// Saving Custom CSS
+		if(isset($_REQUEST['custom_css'])){
+			update_option( 'custom_css', $_REQUEST['custom_css']);
+		}
+	}
+	die("saved");
+
 }
+
+add_action( 'wp_ajax_save_general_settings','save_general_settings');
 
 /** 
 * Saving Color Settings
 */
 function save_color_settings(){
 
-	// Saving Primary Color
-	// if(isset($_REQUEST['primary_color'])){
-	// 	update_option( 'primary_color', $_REQUEST['primary_color']);
-	// }
+	$nonce = $_REQUEST['security'];
 
-	// // Saving Background Color
-	// if(isset($_REQUEST['maven_background_color'])){
-	// 	update_option( 'maven_background_color', $_REQUEST['maven_background_color']);
-	// }
+	if ( ! wp_verify_nonce( $nonce, 'random-security-string' ) ) {
+
+	     die( 'Security check' ); 
+
+	} else {
+		// Saving Primary Color
+		if(isset($_REQUEST['primary_color'])){
+			update_option( 'primary_color', $_REQUEST['primary_color']);
+		}
+
+		// Saving Background Color
+		if(isset($_REQUEST['maven_background_color'])){
+			update_option( 'maven_background_color', $_REQUEST['maven_background_color']);
+		}
+		// Saving font Color
+		if(isset($_REQUEST['maven_font_color'])){
+			update_option( 'maven_font_color', $_REQUEST['maven_font_color']);
+		}
+	}
+	die("saved");
 	
-	// // Saving font Color
-	// if(isset($_REQUEST['maven_font_color'])){
-	// 	update_option( 'maven_font_color', $_REQUEST['maven_font_color']);
-	// }
-	var_dump($_REQUEST);
 
-	exit();
 }
-
 add_action( 'wp_ajax_save_color_settings','save_color_settings');
+
+/** 
+* Saving Footer Settings
+*/
+function save_footer_settings(){
+
+	$nonce = $_REQUEST['security'];
+
+	if ( ! wp_verify_nonce( $nonce, 'random-security-string' ) ) {
+
+	     die( 'Security check' ); 
+
+	} else {
+		// Saving Primary Color
+		if(isset($_REQUEST['footer_column_number'])){
+			update_option( 'footer_column_number', $_REQUEST['footer_column_number']);
+		}
+
+		// Saving Footer Copyright Content
+		if(isset($_REQUEST['footer_content'])){
+			update_option( 'footer_content', $_REQUEST['footer_content']);
+		}
+		
+	}
+	die("saved");
+
+}
+add_action( 'wp_ajax_save_footer_settings','save_footer_settings');

@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Boracay Hotel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <style> #map { height: 600px; width: 100%; } </style>
+  </head>
+  <body>
+    
+    <!-- FIXED NAVBAR
+    ================================================== -->
+    <nav id="navi" class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-logo" href="#"><img class="img-responsive" src="img/LOGO.png"></a>
+        </div>
+        <div id="navbar" class="main-navbar collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <!-- Carousel
+    ================================================== -->
+   <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill parallax" style="background-image:url('img/slider1.jpg');"></div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill parallax" style="background-image:url('img/slider2.jpg');"></div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill parallax" style="background-image:url('img/slider3.jpg');"></div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+
+    <!-- Home WELCOME and FEATURE Section
+    ================================================== -->
+
+    
+    <div class="homePage-mainContent">
+      <div class="container">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="welcomebox">
+            <h1>Welcome to Boracay</h1>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+
+            <div class="featsListing">
+              <ul>
+                <li><i class="flaticon-cocktail"></i><a href="#">Cocktail</a></li>
+                <li><i class="flaticon-bed"></i><a href="#">Rooms</a></li>
+                <li><i class="flaticon-garlands"></i><a href="#">Festivals</a></li>
+                <li><i class="flaticon-car"></i><a href="#">Transport</a></li>
+                <li><i class="flaticon-restaurant"></i><a href="#">Dining</a></li>
+                <li><i class="flaticon-photo-camera"></i><a href="#">Camera</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.col-lg-6 -->
+
+        <div class="col-lg-6">
+          <div class="featGallery">
+            <div class="col-sm-4">
+              <div class="feat-prev">
+                <a href="#" >
+                  <img src="img/feat1.png" alt="Feature Boracay HOTEL feat 1" class="img-responsive">
+                  <span class="play-btn"><i class="fa fa-play"></i></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="feat-prev">
+                <a href="#" >
+                  <img src="img/feat2.png" alt="Feature Boracay HOTEL feat 2" class="img-responsive">
+                  <span class="play-btn"><i class="fa fa-play"></i></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="feat-prev">
+                <a href="#" >
+                  <img src="img/feat3.png" alt="Feature Boracay HOTEL feat 3" class="img-responsive">
+                  <span class="play-btn"><i class="fa fa-play"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="feat-text">
+              <p>Civitatis mala quid, dixisset liquidae nomine quot appetendum ingenii ferrentur nasci conspiratione, fore aiunt leniter, plerique stabilitas consequi tempora appetendi maledicta elegans praetermittenda iucunditas, quale sitne concursionibus detractis faciendum meliore timidiores vivendum, nesciunt, futuros conveniunt asperum viam peccant vult pauca iuberet, praetorem propterea firme augeri terminari perdiderunt alias praesenti saperet, graeci fingi declinabunt synephebos cognita.</p>
+
+              <p>Civitatis mala quid, dixisset liquidae nomine quot appetendum ingenii ferrentur nasci conspiratione, fore aiunt leniter, plerique stabilitas consequi tempora appetendi maledicta elegans praetermittenda iucunditas.</p>
+            </div>
+          </div>
+
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+
+     </div><!-- /.container -->
+  </div>
+
+
+  <!-- Home ABOUT US Section
+  ================================================== -->
+
+  <div class="aboutSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="heading_group text-center">
+              <div class="background_title">WELCOME</div>
+              <h2>BORACAY HOTEL</h2>
+              <span class="subtitle">ONE OF THE BEST PLACES TO RELAX &amp; ENJOY </span> 
+            </div>
+
+            <div class="homeAboutcontent">
+              <p>Civitatis mala quid, dixisset liquidae nomine quot appetendum ingenii ferrentur nasci conspiratione, fore aiunt leniter, plerique stabilitas consequi tempora appetendi maledicta elegans appetendi maledicta elegans praetermittenda iucunditas, quale sitne concursionibus detractis faciendum meliore timidiores vivendum, nesciunt, futuros conveniunt praetermittenda iucunditas, quale sitne concursionibus appetendi maledicta elegans praetermittenda iucunditas, quale sitne concursionibus detractis faciendum meliore timidiores vivendum, nesciunt, futuros conveniunt detractis faciendum appetendi maledicta elegans praetermittenda iucunditas, quale sitne concursionibus detractis faciendum meliore timidiores vivendum, nesciunt, futuros conveniunt meliore timidiores vivendum, nesciunt, futuros conveniunt asperum viam peccant appetendi maledicta elegans praetermittenda iucunditas, quale sitne concursionibus detractis faciendum meliore timidiores vivendum, nesciunt, futuros conveniunt asperum vult pauca iuberet, praetorem propterea firme augeri terminari perdiderunt alias praesenti saperet, graeci fingi declinabunt synephebos cognita. appetendi maledicta elegans praetermittenda iucunditas, quale sitne concursionibus detractis faciendum meliore timidiores vivendum, nesciunt, futuros conveniunt</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home MAP Section
+  ================================================== -->
+
+  <div class="homeMap">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+            <div class="heading_group text-center">
+              <div class="background_title alt">MAP</div>
+              <h2>BORACAY HOTEL</h2>
+              <span class="subtitle">ONE OF THE BEST PLACES TO RELAX &amp; ENJOY </span> 
+            </div>
+
+            <div class="col-md-12">
+              <div class="mapcontent">
+                <ul class="ext-featuer-list">
+                  <li>
+                    <div class="ext-feature clearfix">
+                      <div class="ft-icon"><i class="fa fa-sitemap"></i></div>
+                      <h3 class="ft-title">Comments
+                        <strong>Management</strong></h3>
+                      <p class="ft-desc">Privavisse pertinacia quanta, periculum benivolentiam vitium alterum prorsus nostrum afferat molestiae, quiete numen scribimus nosque frui duce, eorum nec displicet iis gratissimo, fastidii.</p>
+                      <!-- <div class="join-line" style="height: 70px; margin-top: -20px;"></div> -->
+                    </div>
+                  </li>
+                  <li>
+                    <div class="ext-feature clearfix">
+                      <div class="ft-icon"><i class="fa fa-shopping-cart"></i></div>
+                      <h3 class="ft-title">Online
+                        <strong>Shop</strong></h3>
+                      <p class="ft-desc">Privavisse pertinacia quanta, periculum benivolentiam vitium alterum prorsus nostrum afferat molestiae, quiete numen scribimus nosque frui duce, eorum nec displicet iis gratissimo, fastidii.</p>
+                      <!-- <div class="join-line" style="height: 70px; margin-top: -20px;"></div> -->
+                    </div>
+                  </li>
+                  <li>
+                    <div class="ext-feature clearfix">
+                      <div class="ft-icon"><i class="fa fa-file-text"></i></div>
+                      <h3 class="ft-title">To Do
+                        <strong>List</strong></h3>
+                      <p class="ft-desc">Privavisse pertinacia quanta, periculum benivolentiam vitium alterum prorsus nostrum afferat molestiae, quiete numen scribimus nosque frui duce, eorum nec displicet iis gratissimo, fastidii.</p>
+                      <!-- <div class="join-line" style="height: 60px; margin-top: -59px;"></div> -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+          <div id="map"></div>     
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home CTA Section
+  ================================================== -->
+  <div class="homeCTA">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ctacontent">
+            <div class="row">
+              <div class="col-md-9"><p>Get in touch for SPECIAL HOLIDAY RATES!</p></div>
+              <div class="col-md-3">
+              <a class="btn custom-btn" href="#"><span>TALK TO US</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home SOCIAL MEDIA GALLERY Section
+  ================================================== -->
+  <div class="homesocialgallery parallax">
+  <div class="overlay-bg"></div>
+    <div class="container">
+
+      <div class='row'>
+        <div class="col-lg-12">
+          <div class="smg-contnet">
+            <h2>LIVE from #BORACAY</h2>
+
+            <div class="row ">
+              <div class='col-sm-3 smg-img-list'>
+                <img class='img-responsive' alt="BoracayHOTEL live 1" src='img/feat1.png'>
+              </div>
+              <div class='col-sm-3 smg-img-list'>
+                <img class='img-responsive' alt="BoracayHOTEL live 2" src='img/slider1.jpg'>
+              </div>
+              <div class='col-sm-3 smg-img-list'>
+                <img class='img-responsive' alt="BoracayHOTEL live 3" src='img/feat2.png'>
+              </div>
+              <div class='col-sm-3 smg-img-list'>
+                <img class='img-responsive' alt="BoracayHOTEL live 4" src='img/slider2.jpg'>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+   <!-- FOOTER Section
+  ================================================== -->
+  <footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <p class="signup-message">RECEIVE EXCLUSIVE NEWS AND OFFERS</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="signup-form">
+            <input type="text" name="subscriber_email" placeholder="Your Email Address" tabindex="1">
+            <a class="btn custom-btn">Sign Up</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-offset-1 col-sm-1 col-md-offset-1 col-md-3">
+          
+            <div class="btn-wrapper">
+              <a href="#" class="btn-backtotop">
+                <span class="copy">Back to the top</span>
+                <span class="glyphicon glyphicon-menu-up"></span>
+              </a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <div class="footer-logo">
+            <img class="img-responsive" src="img/LOGO.png">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div class="usefullinks">
+            <h4>Usefull Links</h4>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a> Us</li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div class="footer-contact-details">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><i class="fa fa-phone"></i> 09876543211 | 09876543211</li>
+              <li><i class="fa fa-envelope"></i> mailtoadmin@boracay.com</li>
+              <li><i class="fa fa-location-arrow"></i> Boracay, Philipines</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div class="footer-socials ">
+            <h4>Keep In Touch</h4>
+            <p>Get updates about our packages and special offer through social media.
+              Talk to us. Engage in our conversations.</p>
+            <ul>
+              <li class="facebook"><a  href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+              <li class="twitter"><a  href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+              <li class="instagram"><a  href="#"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- <p>&copy; 2017 Company, Inc. || <a href="maventechsolutions.ph"><span>Web Design By: MavenTech Solutions</span></a></p> -->
+    </div>
+  </div>
+
+  </footer>
+    <!-- custom Styled Maps JavaScript
+    ================================================== -->
+    <script>
+
+        var map;
+        var pin1 = { lat:11.989495, lng:121.914118 }; //11.989495, 121.914118
+        var pin2 = { lat:11.966825, lng:121.922186 }; //11.966825, 121.922186
+        var pin3 = { lat:11.947302, lng:121.937936 }; //11.947302, 121.937936 
+
+        var center = { lat:11.970184 , lng:121.922872 };
+        function initMap() {
+
+         // Create a new StyledMapType object, passing it an array of styles,
+          // and the name to be displayed on the map type control.
+          var styledMapType = new google.maps.StyledMapType(
+              [
+                {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+                {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+                {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+                {
+                  featureType: 'administrative',
+                  elementType: 'geometry.stroke',
+                  stylers: [{color: '#ff002d'}]
+                },
+                {
+                  featureType: 'administrative.land_parcel',
+                  elementType: 'geometry.stroke',
+                  stylers: [{color: '#708394'}]
+                },
+                {
+                  featureType: 'administrative.land_parcel',
+                  elementType: 'labels.text.fill',
+                  stylers: [{color: '#ae9e90'}]
+                },
+                {
+                  featureType: 'landscape.natural',
+                  elementType: 'geometry',
+                  stylers: [{color: '#91adc8'}]
+                },
+                {
+                  featureType: 'poi',
+                  elementType: 'geometry',
+                  stylers: [{color: '#dfd2ae'}]
+                },
+                {
+                  featureType: 'poi',
+                  elementType: 'labels.text.fill',
+                  stylers: [{color: '#93817c'}]
+                },
+                {
+                  featureType: 'poi.park',
+                  elementType: 'geometry.fill',
+                  stylers: [{color: '#40e0d0'}]
+                },
+                {
+                  featureType: 'poi.park',
+                  elementType: 'labels.text.fill',
+                  stylers: [{color: '#40e0d0'}]
+                },
+                {
+                  featureType: 'road',
+                  elementType: 'geometry',
+                  stylers: [{color: '#f5f1e6'}]
+                },
+                {
+                  featureType: 'road.arterial',
+                  elementType: 'geometry',
+                  stylers: [{color: '#fdfcf8'}]
+                },
+                {
+                  featureType: 'road.highway',
+                  elementType: 'geometry',
+                  stylers: [{color: '#40e0d0'}]
+                },
+                {
+                  featureType: 'road.highway',
+                  elementType: 'geometry.stroke',
+                  stylers: [{color: '#40e0d0'}]
+                },
+                {
+                  featureType: 'road.highway.controlled_access',
+                  elementType: 'geometry',
+                  stylers: [{color: '#e98d58'}]
+                },
+                {
+                  featureType: 'road.highway.controlled_access',
+                  elementType: 'geometry.stroke',
+                  stylers: [{color: '#db8555'}]
+                },
+                {
+                  featureType: 'road.local',
+                  elementType: 'labels.text.fill',
+                  stylers: [{color: '#806b63'}]
+                },
+                {
+                  featureType: 'transit.line',
+                  elementType: 'geometry',
+                  stylers: [{color: '#e2ebf0'}]
+                },
+                {
+                  featureType: 'transit.line',
+                  elementType: 'labels.text.fill',
+                  stylers: [{color: '#e2ebf0'}]
+                },
+                {
+                  featureType: 'transit.line',
+                  elementType: 'labels.text.stroke',
+                  stylers: [{color: '#e2ebf0'}]
+                },
+                {
+                  featureType: 'transit.station',
+                  elementType: 'geometry',
+                  stylers: [{color: '#e2ebf0'}]
+                },
+                {
+                  featureType: 'water',
+                  elementType: 'geometry.fill',
+                  stylers: [{color: '#e2ebf0'}]
+                },
+                {
+                  featureType: 'water',
+                  elementType: 'labels.text.fill',
+                  stylers: [{color: '#92998d'}]
+                }
+              ],
+              {name: 'BORACAY HOTEL MAP'});
+
+          // Create a map object, and include the MapTypeId to add
+          // to the map type control.
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: center,
+            zoom: 13,
+             mapTypeControlOptions: {
+              mapTypeIds: ['styled_map','terrain']
+            }
+          });
+
+        var iconBase = 'img/Pin1.png';
+        var marker1 = new google.maps.Marker({
+          position: pin1,
+          map: map,
+          icon: iconBase
+        });
+
+        var iconBase2 = 'img/Pin2.png';
+        var marker2 = new google.maps.Marker({
+          position: pin2,
+          map: map,
+          icon: iconBase2
+        });
+
+        var iconBase3 = 'img/Pin3.png';
+        var marker3 = new google.maps.Marker({
+          position: pin3,
+          map: map,
+          icon: iconBase3
+        });
+
+        //Associate the styled map with the MapTypeId and set it to display.
+          map.mapTypes.set('styled_map', styledMapType);
+          map.setMapTypeId('styled_map');
+        }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAPAoxjT-elx0tSjQYyN5kwWzby83mWUI&callback=initMap">
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>
